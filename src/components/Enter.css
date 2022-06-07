@@ -15,8 +15,30 @@
     align-items: center;
     width: 80%;
     height: 50%;
+    overflow: hidden;
+    box-shadow: 5px 10px 8px #131111;
+    border: 0.5px solid;
 }
 
 a {
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    .Enter {
+        grid-template-columns: none;
+        width: 60vw;
+    }
+
+    .Box {
+        width: 100%;
+        height: 75%;
+    }
+ }
+
+ @media screen and (max-width: 600px) {
+    .Box {
+        width: 100%;
+        height: 90%;
+    }
+ }

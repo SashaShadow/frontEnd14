@@ -1,19 +1,18 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./ProductForm.css";
 
 const ProductForm = ({pw}) => {
-
-    const [product, setProduct] = useState();
+    let navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
         return fetch(`https://mewing-wax-celestite.glitch.me/api/productos/`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({"name": event.target.name.value, "price":event.target.price.value,
         "desc": event.target.desc.value, "photo": event.target.photo.value, "code": event.target.code.value,
-        "stock": event.target.stock.value, "pw": pw}),})
+        "stock": event.target.stock.value, "pw": pw}),}).then(navigate("/products"));
       }
 
     return (

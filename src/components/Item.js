@@ -30,27 +30,27 @@ const Item = ({product, pw, setLoader, mod, setMod, carts}) => {
     return (
         <>
         <div className="Item">
-            {pw === "fx88fx" ? <><p>{product.name} ID: {product.id}</p>
+            {pw === "fx88fx" ? <div className="card"><p>{product.name} ID: {product.id}</p>
              <p>Descripción: {product.desc}</p>
              <img src={product.photo} alt={product.name}/>
              <p>Precio: {product.price}</p>
              <p>Stock: {product.stock}</p>
              <button onClick={() => setMod([!mod[0], product.id])}>Modificar producto</button>
-             <button onClick={() => deleteProd(product.id)}>Eliminar producto</button></> : 
+             <button onClick={() => deleteProd(product.id)}>Eliminar producto</button></div> : 
              
-             <><p>{product.name} ID:{product.id}</p>
+             <div className="card"><p>{product.name} ID:{product.id}</p>
              <p>Descripción: {product.desc}</p>
              <img src={product.photo} alt={product.name}/>
              <p>Precio: {product.price}</p>
              <p>Stock: {product.stock}</p>
-             <form>
+             <form className="addForm">
                 <button onClick={() => addToCart()}>Agregar al carrito número</button>
                 <select name="cart" onChange={(e) => setCid(e.target.value)}>
                     {carts.map(cart => {
                         return <option key={cart.id} value={cart.id}>{cart.id}</option>
                     })}
                 </select>
-             </form></>
+             </form></div>
         }
         </div>
         </>

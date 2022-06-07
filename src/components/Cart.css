@@ -12,3 +12,21 @@
     grid-gap: 1rem;
     background: rgba(155, 45, 45, 0.2);
 }
+
+@media screen and (max-width: 850px) {
+    .prodContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+ }
+
+@media screen and (max-width: 600px) {
+    .prodContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+ }
+
+ @media screen and (max-width: 460px) {
+    .prodContainer {
+        grid-template-columns: none;
+    }
+ }

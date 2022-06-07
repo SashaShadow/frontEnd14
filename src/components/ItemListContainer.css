@@ -5,10 +5,42 @@
     width: 80vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5rem;
+    grid-gap: 2rem;
+}
+
+.card {
+    overflow: hidden;
+    box-shadow: 5px 10px 8px #131111;
+    border: 0.5px solid;
 }
 
 img {
     width: 70%;
     height: 50%;
 }
+
+.addForm {
+    margin: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .ItemListContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        width: 60vw;
+    }
+ }
+
+@media screen and (max-width: 650px) {
+    .ItemListContainer {
+        grid-template-columns:none;
+
+    }
+ }
+
+@media screen and (max-width: 500px) {
+    .ItemListContainer {
+        grid-template-columns:none;
+
+    }
+ }
