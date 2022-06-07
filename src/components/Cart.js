@@ -36,9 +36,10 @@ const Cart = () => {
 
     return (
         <>
-        {carts ? <><h2>Carritos</h2> 
+        <h2>Carritos</h2> 
         <Link to="/products"><h3>Volver al listado de productos</h3></Link>
         <a onClick={() => newCart()}><h3>Crear un nuevo carrito</h3></a>
+        {carts.length ? <>
         {carts.map(cart => {
             return <div className="Cart">
                 <h3>Carrito {cart.id}</h3>

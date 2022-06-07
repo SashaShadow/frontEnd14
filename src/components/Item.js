@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const Item = ({product, pw, setLoader, mod, setMod, carts}) => {
 
-    const [cid, setCid] = useState(carts ? carts[0].id : "");
+    const [cid, setCid] = useState(carts.length ? carts[0].id : "");
 
     useEffect(() => {
         console.log(cid);
